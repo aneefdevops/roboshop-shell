@@ -22,13 +22,13 @@ echo -e '\e[36m>>>>> download depe  <<<<<\e[0m'
 cd /app
 npm install
 echo -e '\e[36m>>>>> app repo  <<<<<\e[0m'
-cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
+cp catalogue.service /etc/systemd/system/catalogue.service
 echo -e '\e[36m>>>>> reload  <<<<<\e[0m'
 systemctl daemon-reload
 echo -e '\e[36m>>>>> reload  <<<<<\e[0m'
 systemctl enable catalogue
 systemctl start catalogue
-cp /home/roboshop-shell/mangodb.repo /etc/yum.repos.d/mongo.repo
+cp mangodb.repo /etc/yum.repos.d/mongo.repo
 echo -e '\e[36m>>>>> install mangodb  <<<<<\e[0m'
 
 yum install mongodb-org-shell -y
