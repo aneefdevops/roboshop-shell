@@ -10,6 +10,6 @@ echo -e '\e[36m>>>>> extract frontend content <<<<<\e[0m'
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 echo -e '\e[36m>>>>> add repo file <<<<<\e[0m'
-cp roboshop.conf /etc/nginx/default.d/roboshop.conf
+cp /home/centos/roboshop-shell/ roboshop.conf /etc/nginx/default.d/roboshop.conf
 echo -e '\e[36m>>>>> restat  <<<<<\e[0m'
 systemctl restart nginx
