@@ -8,6 +8,6 @@ echo -e '\e[36m>>>>> 127.0.0.1 to 0.0.0.0 <<<<<\e[0m'
 sed -i -e 's|127.0.0.1|0.0.0.0|' /etc/redis/redis.conf
 echo -e '\e[36m>>>>> start redis <<<<<\e[0m'
 systemctl enable redis
-systemctl start redis
+systemctl restart redis
 
 
