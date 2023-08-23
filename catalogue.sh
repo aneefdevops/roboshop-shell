@@ -1,3 +1,4 @@
+source commom.sh
 echo -e '\e[36m>>>>> setup nodejs <<<<<\e[0m'
 
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
@@ -8,7 +9,7 @@ yum install nodejs -y
 
 echo -e '\e[36m>>>>> add user <<<<<\e[0m'
 
-useradd roboshop
+useradd ${app_user}
 
 echo -e '\e[36m>>>>> setup app  <<<<<\e[0m'
 

@@ -1,8 +1,9 @@
+source commom.sh
 echo -e '\e[36m>>>>> install maven <<<<<\e[0m'
 yum install maven -y
 echo -e '\e[36m>>>>> useradd <<<<<\e[0m'
 
-useradd roboshop
+useradd ${app_user}
 echo -e '\e[36m>>>>> start redis <<<<<\e[0m'
 rm -rf /app
 mkdir /app

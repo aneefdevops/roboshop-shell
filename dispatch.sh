@@ -1,7 +1,8 @@
+source commom.sh
 echo -e '\e[36m>>>>> install golanf  <<<<<\e[0m'
 yum install golang -y
 echo -e '\e[36m>>>>> useradd  <<<<<\e[0m'
-useradd roboshop
+useradd ${app_user}
 echo -e '\e[36m>>>>> remove contnet   <<<<<\e[0m'
 rm -rf /app
 mkdir /app

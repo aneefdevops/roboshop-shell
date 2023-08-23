@@ -1,8 +1,9 @@
+source commom.sh
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo -e '\e[36m>>>>> install nodejs <<<<<\e[0m'
 yum install nodejs -y
 echo -e '\e[36m>>>>> useradd  <<<<<\e[0m'
-useradd roboshop
+useradd ${app_user}
 echo -e '\e[36m>>>>> unzip  <<<<<\e[0m'
 rm -rf /app
 mkdir /app
