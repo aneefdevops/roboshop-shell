@@ -11,7 +11,7 @@ commet and pull
 git pull
 sudo bash file name
 
-/home/centos/roboshop-shell/
+${script_path}/
 
 cp fliename
 

@@ -15,7 +15,7 @@ unzip /tmp/cart.zip
 echo -e '\e[36m>>>>> nmp intall  <<<<<\e[0m'
 cd /app
 npm install
-cp /home/centos/roboshop-shell/cart.service /etc/systemd/system/cart.service
+cp ${script_path}/cart.service /etc/systemd/system/cart.service
 echo -e '\e[36m>>>>> start and reload <<<<<\e[0m'
 systemctl daemon-reload
 systemctl enable cart
