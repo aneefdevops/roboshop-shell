@@ -1,5 +1,6 @@
+script=$(realpath "$0")
+script_path=$(dirname "$script")
 source ${script_path}/commom.sh
-script_path=$(dirname $0)
 echo -e '\e[36m>>>>> redis repo file  <<<<<\e[0m'
 yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
 echo -e '\e[36m>>>>> enable redis  <<<<<\e[0m'

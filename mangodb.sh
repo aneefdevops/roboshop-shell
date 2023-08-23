@@ -1,7 +1,6 @@
+script=$(realpath "$0")
+script_path=$(dirname "$script")
 source ${script_path}/commom.sh
-script_path=$(dirname $0)
-source ${script_path}/commom.sh
-script_path=$(dirname $0)
 echo -e '\e[36m>>>>> add repo file <<<<<\e[0m'
 cp ${script_path}/mangodb.repo /etc/yum.repos.d/mongo.repo
 echo -e '\e[36m>>>>> install mangodb <<<<<\e[0m'

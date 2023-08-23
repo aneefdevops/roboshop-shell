@@ -1,5 +1,6 @@
+script=$(realpath "$0")
+script_path=$(dirname "$script")
 source ${script_path}/commom.sh
-script_path=$(dirname $0)
 curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
 curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash
 echo -e '\e[36m>>>>> install server  <<<<<\e[0m'
