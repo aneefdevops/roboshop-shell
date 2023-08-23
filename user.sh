@@ -1,4 +1,5 @@
-source commom.sh
+script_path=$(dirname $0)
+source ${script_path}/commom.sh
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo -e '\e[36m>>>>> install nodejs  <<<<<\e[0m'
 yum install nodejs -y
@@ -15,13 +16,13 @@ echo -e '\e[36m>>>>> download depe  <<<<<\e[0m'
 cd /app
 npm install
 echo -e '\e[36m>>>>> add repo  <<<<<\e[0m'
-cp /home/centos/roboshop-shell/user.service /etc/systemd/system/user.service
+cp $script_path/user.service /etc/systemd/system/user.service
 echo -e '\e[36m>>>>> enable and start  <<<<<\e[0m'
 systemctl daemon-reload
 systemctl enable user
 systemctl start user
 echo -e '\e[36m>>>>> download depe  <<<<<\e[0m'
-cp /home/centos/roboshop-shell/mangodb.repo /etc/yum.repos.d/mongo.repo
+cp $script_path/mangodb.repo /etc/yum.repos.d/mongo.repo
 echo -e '\e[36m>>>>> install mangodb  <<<<<\e[0m'
 yum install mongodb-org-shell -y
 mongo --host mangodb.aneefdevops.online </app/schema/user.js
