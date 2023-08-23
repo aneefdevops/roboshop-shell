@@ -1,4 +1,5 @@
-source commom.sh
+source ${script_path}/commom.sh
+script_path=$(dirname $0)
 echo -e '\e[36m>>>>> install python36   <<<<<\e[0m'
 yum install python36 gcc python3-devel -y
 echo -e '\e[36m>>>>> useradd <<<<<\e[0m'

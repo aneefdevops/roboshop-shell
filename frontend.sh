@@ -1,3 +1,5 @@
+source ${script_path}/commom.sh
+script_path=$(dirname $0)
 echo -e '\e[36m>>>>>install nginx<<<<<\e[0m'
 yum install nginx -y
 systemctl enable nginx
